@@ -1,4 +1,5 @@
 // seek & destroy 
+// variable then for loop then if statement then return (learn arguments and .call)
 
 function destroyer(arr) {
   var args = Array.prototype.slice.call(arguments);
