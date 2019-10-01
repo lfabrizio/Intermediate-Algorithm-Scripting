@@ -1,19 +1,35 @@
 function whatIsInAName(collection, source) {
-  // "What's in a name? that which we call a rose
-  // By any other name would smell as sweet.”
-  // -- by William Shakespeare, Romeo and Juliet
-  var srcKeys = Object.keys(source);
+  // What's in a name?
+  var arr = [];
+  // Only change code below this line
+  var keys = Object.keys(source);
 
-  // filter the collection
-  return collection.filter(function (obj) {
-    for(var i = 0; i < srcKeys.length; i++) {
-      if(!obj.hasOwnProperty(srcKeys[i]) || obj[srcKeys[i]] !== source[srcKeys[i]]) {
-        return false;
+  for (let item = 0; item < collection.length; item++)
+  {
+    var isGood = true;
+    for(let key = 0; key < keys.length; key++)
+    {
+      if(!collection[item].hasOwnProperty(keys[key]))
+      {
+        // key not there NEXT!
+        isGood = false;
+        break;
+      }
+      if (collection[item][keys[key]] !== source[keys[key]])
+      {
+        // not a match NEXT!
+        isGood = false;
+        break;
       }
     }
-    return true;
-  });
+    if (isGood)
+    {
+      arr.push(collection[item]);
+    }
+  }
+
+  // Only change code above this line
+  return arr;
 }
 
-// test here
 whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
