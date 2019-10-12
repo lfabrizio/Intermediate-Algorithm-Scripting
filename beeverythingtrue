@@ -1,0 +1,4 @@
+// Create a counter to check how many are true.
+  var counter = 0;
+// for loop 
+}
