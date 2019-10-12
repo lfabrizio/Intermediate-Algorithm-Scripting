@@ -1,16 +1,16 @@
 // Sum ALl Numbers in a range 
-
 function sumAll(arr) {
-  let biggerNumber = Math.max(...arr);
-  let smallerNumber = Math.min(...arr)
+  let bigNumber = Math.max(...arr);
+  let smallNumber = Math.min(...arr);
 
-  let total = biggerNumber + smallerNumber
+  let total = smallNumber + bigNumber;
 
-  for (let i = smallerNumber + 1; i < biggerNumber; i++) {
-    total += i
+  for(let i = smallNumber + 1;i < bigNumber;i++){
+    total += i;
   }
+  return total;
 
-  return total
+
 }
 
 sumAll([1, 4]);
