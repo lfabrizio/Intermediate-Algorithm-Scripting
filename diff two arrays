@@ -1,19 +1,21 @@
-// diff two arrays
-
+// diff two arrays refactored
 function diffArray(arr1, arr2) {
+  // empty temp array
  var newArr = [];
- // Same, same; but different.
-
- // Combine arr1 and arr2 into a tempArr
- const tempArr = arr1.concat(arr2)
-
- // Iterate through items in tempArr
- newArr = tempArr.filter(element => {
-   // Compare each element both arr1 and arr2
-   // Store it if it only exist in one not both
-   return arr1.indexOf(element) === -1 || arr2.indexOf(element) === -1
- })
-
- console.log(newArr)
+ // for loop iterate through array 1
+// use indexOf
+ for(var i = 0; i < arr1.length; i ++){
+   // if arr 2 doesnt contain items in arr 1 add to new arr
+   if(arr2.indexOf(arr1[i])===-1){
+     newArr.push(arr1[i]);
+   }
+ }
+ //now check second array 
+ for(var j =0;j < arr2.length;j++){
+   if(arr1.indexOf(arr2[j])===-1){
+     newArr.push(arr2[j]);
+   }
+ }
+ 
  return newArr;
 }
