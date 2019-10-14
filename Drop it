@@ -1,0 +1,13 @@
+function dropElements(arr, func) {
+  // Drop them elements.
+  // while loop
+  // use of shift
+  // 
+  // while we have function false value for first index shift left until it is true
+  while(!func(arr[0])){
+    arr.shift();
+  }
+  return arr;
+}
+
+dropElements([1, 2, 3], function(n) {return n < 3; });
