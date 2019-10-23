@@ -1,3 +1,5 @@
+// use object.keys and maybe hasOwnProperty
+
 function whatIsInAName(collection, source) {
   // What's in a name?
   var keys = Object.keys(source);
