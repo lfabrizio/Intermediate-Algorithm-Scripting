@@ -1,7 +1,6 @@
 function truthCheck(collection, pre) {
   // Is everyone being true?
   // collection is an arr of objects
-  // look thru collection -- all properties have sex? return true
   // every method- checks if all elements in arr pass a test provided as a function
   // pass in callback function 
   // access property w bracket notation
